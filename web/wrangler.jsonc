@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "pestawaysolutions-us",
+	"compatibility_date": "2026-08-22",
+	// account_id intentionally left unset -- whose Cloudflare account this
+	// deploys under (Robert's own, matching how bbsystems-us deploys under
+	// Cruz's account for ownership continuity, vs. Ryan's) isn't decided
+	// yet. Set this before the first deploy -- a CI deploy without it will
+	// fail with "More than one account available" if the token has access
+	// to more than one account (this exact bug hit ramonas-portfolio).
+	"main": "worker/index.ts",
+	"assets": {
+		"directory": "./build",
+		"binding": "ASSETS"
+	},
+	"send_email": [
+		{ "name": "EMAIL" }
+	],
+	"routes": [
+		{ "pattern": "pestawaysolutions.com", "custom_domain": true },
+		{ "pattern": "www.pestawaysolutions.com", "custom_domain": true }
+	]
+}

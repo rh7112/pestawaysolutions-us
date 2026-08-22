@@ -41,9 +41,28 @@ on 2026-08-22:
 
 ## Status
 
-Just starting — talked to Robert on 2026-08-21. Nothing built yet. See
-`Questionaire.txt` for what's still needed from him before real work starts,
-mirroring how `bbsystems-us`'s onboarding worked.
+Talked to Robert on 2026-08-21; nothing back on `Questionaire.txt` yet, but
+scaffolded the site itself (2026-08-22) using content already public on the
+current site, so there's a working starting point instead of an empty repo.
+
+- SvelteKit + Tailwind v4 + Cloudflare Worker (static assets), same stack as
+  `bbsystems-us` and `ramonas-portfolio` — see [`web/`](./web).
+- Pages: home, about, pest-control, `wildlife-removal/[animal]` (one
+  dynamic route for bats/squirrels/moles/raccoons/groundhogs, instead of the
+  old site's near-duplicate pages), reviews (Birdeye embedded, same
+  `bid=165065098699287` as the current site), contact (form → Worker →
+  email, mirrors bbsystems-us's `web/worker/index.ts` pattern).
+- Builds clean (`npm run build`, `svelte-check` — 0 errors), verified in a
+  local dev preview.
+- **Not done yet, blocking a real deploy:**
+  - `web/wrangler.jsonc`'s `account_id` — whose Cloudflare account this
+    lives under isn't decided (see the comment there)
+  - `worker/index.ts`'s `CONTACT_TO` is a placeholder — needs Robert's real
+    inbox once Email Routing exists for `pestawaysolutions.com`
+  - No deploy workflow yet — waiting on the account_id decision first
+  - Content throughout is a reasonable-default starting draft from the
+    current site, not yet confirmed against `Questionaire.txt`'s open
+    questions (nav structure, pricing, about blurb length, photos, etc.)
 
 ## What we need from Robert
 

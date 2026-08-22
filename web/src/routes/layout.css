@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+:root {
+	/* Forest green + warm amber -- distinct from bbsystems-us's dark
+	   cyan-tech look and the family portfolio sites' orange/stone look,
+	   fitting for an outdoor pest/wildlife business. Read by the
+	   <hurd-footer> web component too (custom properties pierce shadow DOM). */
+	--color-border: #ddd6c4;
+	--color-text-muted: #6b6f5e;
+	--color-accent: #c97a2b;
+}
