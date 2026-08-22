@@ -1,0 +1,42 @@
+1. Logo / brand assets — does Robert have any beyond what's on the current
+   site (just a small cropped logo image), or do we design something simple?
+
+2. Birdeye — confirm the same Birdeye account/widget (bid=165065098699287)
+   should carry over to the new site's Reviews section, same as the current
+   one embeds.
+
+3. The second software Robert mentioned — what is it, and does anything
+   about it need to show up on the public site (e.g. an online booking
+   widget), or is it purely internal (scheduling/invoicing/CRM)?
+
+4. Services list — confirm the current list is complete/accurate: ants,
+   insects, hornets, bats, moles, spiders, bees, termites, squirrels,
+   mice/rodents, yellow jackets, seasonal home pest prevention, business
+   pest control, nuisance wildlife removal + entry-point repair. Anything
+   to add or drop?
+
+5. Site structure — keep a dedicated page per pest/animal (current
+   structure), or consolidate some into fewer pages with sections? Ryan's
+   suggestion: group wildlife-removal pages (bats/squirrels/moles/
+   raccoons/groundhogs) under one "Wildlife Removal" nav dropdown instead
+   of five flat top-level links. Also: drop the orphaned
+   `/raccoon-removal/` page (near-duplicate of `/raccoon-removal-2/`,
+   doesn't appear to be linked from anywhere)?
+
+6. Photos — of jobs, wildlife catches, before/afters — anything usable
+   beyond what's already on the current site?
+
+7. Pricing — list rates, or keep it "contact for quote" (matches the
+   current site's approach)?
+
+8. About / bio blurb — how much does Robert want to share about himself
+   vs. keeping it business-only?
+
+9. Service area — Warsaw/Kosciusko County only, or a wider radius?
+
+10. Contact preference — phone, contact form, Facebook Messenger (current
+    site mentions messaging on Facebook), or some combination?
+
+11. Family rate — internal note, not for the site: Ryan is doing this at a
+    reduced/family price given the personal relationship. Confirm the
+    actual number separately, don't publish it.
