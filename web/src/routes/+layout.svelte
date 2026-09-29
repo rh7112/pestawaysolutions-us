@@ -140,5 +140,5 @@
 		</div>
 	</footer>
 
-	<hurd-footer tagline="Pest Away Solutions LLC" link-href="https://ryan.hurd.cc"></hurd-footer>
+	<hurd-footer tagline="Pest Away Solutions LLC" link-href="https://hurd.cc"></hurd-footer>
 </div>
