@@ -1,0 +1,52 @@
+name: Rebuild GitHub Pages preview
+
+# Keeps the client-facing preview (rh7112.github.io/pestawaysolutions-us/)
+# in sync with master automatically -- separate from the real Cloudflare
+# Workers deploy, which isn't configured yet (account_id intentionally
+# unset in web/wrangler.jsonc; see that file's comment). This workflow
+# only ever writes to the gh-pages-preview branch's docs/ folder, never
+# to master, and never touches Cloudflare.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - run: npm ci
+        working-directory: web
+
+      - run: npm run build
+        working-directory: web
+        env:
+          # Pages project sites serve from a repo-name subpath, not
+          # domain root -- see web/vite.config.ts's basePath comment.
+          BASE_PATH: /pestawaysolutions-us
+
+      - name: Publish build output to gh-pages-preview branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages-preview
+          git checkout gh-pages-preview
+          rm -rf docs
+          mkdir -p docs
+          cp -r web/build/. docs/
+          touch docs/.nojekyll
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to the built output -- nothing to deploy."
+          else
+            git commit -m "Auto-update preview build from ${GITHUB_SHA}"
+            git push origin gh-pages-preview
+          fi
