@@ -134,11 +134,11 @@
 				</ul>
 			</div>
 		</div>
-
-		<div class="border-t border-[#ddd6c4] px-4 py-4 text-center text-xs text-[#8a8b7e] sm:px-6">
-			&copy; {new Date().getFullYear()} Pest Away Solutions LLC. All rights reserved.
-		</div>
 	</footer>
 
+	<!-- Copyright/company name shown here, not duplicated above -- hurd-footer
+		 auto-renders "© <year> <tagline>", which already covers what a
+		 separate "© year Pest Away Solutions LLC. All rights reserved." bar
+		 here used to repeat. -->
 	<hurd-footer tagline="Pest Away Solutions LLC"></hurd-footer>
 </div>
