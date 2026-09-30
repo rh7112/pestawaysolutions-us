@@ -38,54 +38,54 @@
 </svelte:head>
 
 <section class="mx-auto max-w-2xl px-4 py-16 sm:px-6">
-	<p class="text-sm font-semibold tracking-[0.2em] text-[#c97a2b] uppercase">Contact</p>
-	<h1 class="mt-2 text-3xl font-bold text-[#1e2a1f] sm:text-4xl">Get in touch</h1>
-	<p class="mt-4 text-lg text-[#3d4536]">
+	<p class="text-sm font-semibold tracking-[0.2em] text-[#F48222] uppercase">Contact</p>
+	<h1 class="mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">Get in touch</h1>
+	<p class="mt-4 text-lg text-[#333333]">
 		For the fastest response, call or text
-		<a href="tel:{phoneHref}" class="font-semibold text-[#1f4a33] underline">{phoneDisplay}</a>. Or send a message
+		<a href="tel:{phoneHref}" class="font-semibold text-[#F48222] underline">{phoneDisplay}</a>. Or send a message
 		below.
 	</p>
 
 	{#if status === 'sent'}
-		<div class="mt-8 rounded-2xl border border-[#1f4a33]/30 bg-[#f0ead9] p-6 text-[#1f4a33]">
+		<div class="mt-8 rounded-2xl border border-[#F48222]/30 bg-[#FDF1E7] p-6 text-[#F48222]">
 			Thanks — your message has been sent. We'll get back to you soon.
 		</div>
 	{:else}
 		<form class="mt-8 space-y-4" onsubmit={submit}>
 			<div class="grid gap-4 sm:grid-cols-2">
-				<label class="block text-sm font-medium text-[#3d4536]">
+				<label class="block text-sm font-medium text-[#333333]">
 					First name
 					<input
 						bind:value={firstName}
 						required
-						class="mt-1 w-full rounded-lg border border-[#ddd6c4] bg-white px-3 py-2 text-[#1e2a1f]"
+						class="mt-1 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-[#1A1A1A]"
 					/>
 				</label>
-				<label class="block text-sm font-medium text-[#3d4536]">
+				<label class="block text-sm font-medium text-[#333333]">
 					Last name
 					<input
 						bind:value={lastName}
 						required
-						class="mt-1 w-full rounded-lg border border-[#ddd6c4] bg-white px-3 py-2 text-[#1e2a1f]"
+						class="mt-1 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-[#1A1A1A]"
 					/>
 				</label>
 			</div>
-			<label class="block text-sm font-medium text-[#3d4536]">
+			<label class="block text-sm font-medium text-[#333333]">
 				Email
 				<input
 					type="email"
 					bind:value={email}
 					required
-					class="mt-1 w-full rounded-lg border border-[#ddd6c4] bg-white px-3 py-2 text-[#1e2a1f]"
+					class="mt-1 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-[#1A1A1A]"
 				/>
 			</label>
-			<label class="block text-sm font-medium text-[#3d4536]">
+			<label class="block text-sm font-medium text-[#333333]">
 				What's going on?
 				<textarea
 					bind:value={message}
 					required
 					rows="5"
-					class="mt-1 w-full rounded-lg border border-[#ddd6c4] bg-white px-3 py-2 text-[#1e2a1f]"
+					class="mt-1 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-[#1A1A1A]"
 				></textarea>
 			</label>
 
@@ -96,7 +96,7 @@
 			<button
 				type="submit"
 				disabled={status === 'sending'}
-				class="rounded-full bg-[#1f4a33] px-6 py-3 font-semibold text-white transition hover:bg-[#163826] disabled:opacity-60"
+				class="rounded-full bg-[#F48222] px-6 py-3 font-semibold text-white transition hover:bg-[#D9721A] disabled:opacity-60"
 			>
 				{status === 'sending' ? 'Sending…' : 'Send message'}
 			</button>

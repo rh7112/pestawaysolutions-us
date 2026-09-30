@@ -5,8 +5,8 @@
 </svelte:head>
 
 <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
-	<p class="text-sm font-semibold tracking-[0.2em] text-[#c97a2b] uppercase">Reviews</p>
-	<h1 class="mt-2 text-3xl font-bold text-[#1e2a1f] sm:text-4xl">What customers are saying</h1>
+	<p class="text-sm font-semibold tracking-[0.2em] text-[#F48222] uppercase">Reviews</p>
+	<h1 class="mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">What customers are saying</h1>
 
 	<!--
 		Same Birdeye widgets embedded on the current site's Reviews page

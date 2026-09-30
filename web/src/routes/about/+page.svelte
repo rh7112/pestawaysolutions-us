@@ -5,10 +5,10 @@
 </svelte:head>
 
 <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-	<p class="text-sm font-semibold tracking-[0.2em] text-[#c97a2b] uppercase">About</p>
-	<h1 class="mt-2 text-3xl font-bold text-[#1e2a1f] sm:text-4xl">Pest Away Solutions LLC</h1>
+	<p class="text-sm font-semibold tracking-[0.2em] text-[#F48222] uppercase">About</p>
+	<h1 class="mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">Pest Away Solutions LLC</h1>
 
-	<div class="mt-6 space-y-4 text-lg text-[#3d4536]">
+	<div class="mt-6 space-y-4 text-lg text-[#333333]">
 		<p>Thank you for your interest in Pest Away Solutions.</p>
 		<p>
 			I aim to solve your pest problem in the most effective, safe, and professional manner possible — using today's
