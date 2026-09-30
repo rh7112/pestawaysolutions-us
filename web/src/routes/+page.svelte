@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const phoneHref = '+15745274665';
 	const phoneDisplay = '(574) 527-4665';
 
@@ -41,7 +43,7 @@
 					Call/Text {phoneDisplay}
 				</a>
 				<a
-					href="/contact"
+					href="{base}/contact"
 					class="rounded-full border border-[#F48222] px-6 py-3 font-semibold text-[#F48222] transition hover:bg-[#FDF1E7]"
 				>
 					Request a quote
@@ -96,7 +98,7 @@
 			<a href="tel:{phoneHref}" class="rounded-full bg-white px-6 py-3 font-semibold text-[#F48222]">
 				Call/Text {phoneDisplay}
 			</a>
-			<a href="/contact" class="rounded-full border border-white px-6 py-3 font-semibold text-white hover:bg-white/10">
+			<a href="{base}/contact" class="rounded-full border border-white px-6 py-3 font-semibold text-white hover:bg-white/10">
 				Contact form
 			</a>
 		</div>

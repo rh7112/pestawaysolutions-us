@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 
@@ -22,21 +23,21 @@
 		name="description"
 		content="Pest control and nuisance wildlife removal serving Warsaw and Kosciusko County, Indiana. Call or text (574) 527-4665."
 	/>
-	<link rel="icon" href="/favicon.png" />
+	<link rel="icon" href="{base}/favicon.png" />
 	<script type="module" src="https://cdn.jsdelivr.net/gh/rh7112/hurd-footer@main/hurd-footer.js"></script>
 </svelte:head>
 
 <div class="flex min-h-screen flex-col bg-[#FFFFFF] text-[#1A1A1A]">
 	<header class="sticky top-0 z-50 border-b border-[#E5E5E5] bg-[#FFFFFF]/95 backdrop-blur">
 		<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-			<a href="/" class="flex items-center gap-2.5">
-				<img src="/images/pestaway-logo-mark.png" alt="" class="h-9 w-auto" />
+			<a href="{base}/" class="flex items-center gap-2.5">
+				<img src="{base}/images/pestaway-logo-mark.png" alt="" class="h-9 w-auto" />
 				<span class="text-lg font-bold tracking-tight text-[#1A1A1A]">Pest Away Solutions</span>
 			</a>
 
 			<nav class="hidden items-center gap-7 text-sm font-medium text-[#333333] md:flex">
-				<a href="/about" class="transition hover:text-[#F48222]">About</a>
-				<a href="/pest-control" class="transition hover:text-[#F48222]">Pest Control</a>
+				<a href="{base}/about" class="transition hover:text-[#F48222]">About</a>
+				<a href="{base}/pest-control" class="transition hover:text-[#F48222]">Pest Control</a>
 				<div class="group relative">
 					<button class="flex items-center gap-1 transition hover:text-[#F48222]">
 						Wildlife Removal
@@ -48,14 +49,14 @@
 						class="invisible absolute left-0 z-10 mt-2 w-44 rounded-lg border border-[#E5E5E5] bg-[#FFFFFF] py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100"
 					>
 						{#each wildlifePages as page (page.href)}
-							<a href={page.href} class="block px-4 py-2 text-sm hover:bg-[#FDF1E7] hover:text-[#F48222]">
+							<a href={base + page.href} class="block px-4 py-2 text-sm hover:bg-[#FDF1E7] hover:text-[#F48222]">
 								{page.label}
 							</a>
 						{/each}
 					</div>
 				</div>
-				<a href="/reviews" class="transition hover:text-[#F48222]">Reviews</a>
-				<a href="/contact" class="transition hover:text-[#F48222]">Contact</a>
+				<a href="{base}/reviews" class="transition hover:text-[#F48222]">Reviews</a>
+				<a href="{base}/contact" class="transition hover:text-[#F48222]">Contact</a>
 			</nav>
 
 			<div class="hidden md:block">
@@ -85,20 +86,20 @@
 
 		{#if navOpen}
 			<nav class="flex flex-col gap-1 border-t border-[#E5E5E5] bg-[#FFFFFF] px-4 py-3 text-sm font-medium text-[#333333] md:hidden">
-				<a href="/about" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>About</a>
-				<a href="/pest-control" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
+				<a href="{base}/about" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>About</a>
+				<a href="{base}/pest-control" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
 					Pest Control
 				</a>
 				<p class="mt-2 px-2 text-xs font-semibold tracking-wide text-[#6B6B6B] uppercase">Wildlife Removal</p>
 				{#each wildlifePages as page (page.href)}
-					<a href={page.href} class="rounded px-4 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
+					<a href={base + page.href} class="rounded px-4 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
 						{page.label}
 					</a>
 				{/each}
-				<a href="/reviews" class="mt-2 rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
+				<a href="{base}/reviews" class="mt-2 rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>
 					Reviews
 				</a>
-				<a href="/contact" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>Contact</a>
+				<a href="{base}/contact" class="rounded px-2 py-2 hover:bg-[#FDF1E7]" onclick={() => (navOpen = false)}>Contact</a>
 				<a href="tel:{phoneHref}" class="mt-2 rounded-full bg-[#F48222] px-4 py-2 text-center font-semibold text-white">
 					Call/Text {phoneDisplay}
 				</a>
