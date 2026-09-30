@@ -1,5 +1,6 @@
 <script lang="ts">
 	import './layout.css';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 
@@ -28,15 +29,15 @@
 <div class="flex min-h-screen flex-col bg-[#faf8f2] text-[#1e2a1f]">
 	<header class="sticky top-0 z-50 border-b border-[#ddd6c4] bg-[#faf8f2]/95 backdrop-blur">
 		<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-			<a href="/" class="flex items-center gap-2">
+			<a href="{base}/" class="flex items-center gap-2">
 				<span class="text-lg font-bold tracking-tight text-[#1f4a33]"
 					>Pest Away <span class="text-[#c97a2b]">Solutions</span></span
 				>
 			</a>
 
 			<nav class="hidden items-center gap-7 text-sm font-medium text-[#3d4536] md:flex">
-				<a href="/about" class="transition hover:text-[#c97a2b]">About</a>
-				<a href="/pest-control" class="transition hover:text-[#c97a2b]">Pest Control</a>
+				<a href="{base}/about" class="transition hover:text-[#c97a2b]">About</a>
+				<a href="{base}/pest-control" class="transition hover:text-[#c97a2b]">Pest Control</a>
 				<div class="group relative">
 					<button class="flex items-center gap-1 transition hover:text-[#c97a2b]">
 						Wildlife Removal
@@ -48,14 +49,14 @@
 						class="invisible absolute left-0 z-10 mt-2 w-44 rounded-lg border border-[#ddd6c4] bg-[#faf8f2] py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100"
 					>
 						{#each wildlifePages as page (page.href)}
-							<a href={page.href} class="block px-4 py-2 text-sm hover:bg-[#f0ead9] hover:text-[#c97a2b]">
+							<a href={base + page.href} class="block px-4 py-2 text-sm hover:bg-[#f0ead9] hover:text-[#c97a2b]">
 								{page.label}
 							</a>
 						{/each}
 					</div>
 				</div>
-				<a href="/reviews" class="transition hover:text-[#c97a2b]">Reviews</a>
-				<a href="/contact" class="transition hover:text-[#c97a2b]">Contact</a>
+				<a href="{base}/reviews" class="transition hover:text-[#c97a2b]">Reviews</a>
+				<a href="{base}/contact" class="transition hover:text-[#c97a2b]">Contact</a>
 			</nav>
 
 			<div class="hidden md:block">
@@ -85,20 +86,20 @@
 
 		{#if navOpen}
 			<nav class="flex flex-col gap-1 border-t border-[#ddd6c4] bg-[#faf8f2] px-4 py-3 text-sm font-medium text-[#3d4536] md:hidden">
-				<a href="/about" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>About</a>
-				<a href="/pest-control" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
+				<a href="{base}/about" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>About</a>
+				<a href="{base}/pest-control" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
 					Pest Control
 				</a>
 				<p class="mt-2 px-2 text-xs font-semibold tracking-wide text-[#6b6f5e] uppercase">Wildlife Removal</p>
 				{#each wildlifePages as page (page.href)}
-					<a href={page.href} class="rounded px-4 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
+					<a href={base + page.href} class="rounded px-4 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
 						{page.label}
 					</a>
 				{/each}
-				<a href="/reviews" class="mt-2 rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
+				<a href="{base}/reviews" class="mt-2 rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>
 					Reviews
 				</a>
-				<a href="/contact" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>Contact</a>
+				<a href="{base}/contact" class="rounded px-2 py-2 hover:bg-[#f0ead9]" onclick={() => (navOpen = false)}>Contact</a>
 				<a href="tel:{phoneHref}" class="mt-2 rounded-full bg-[#1f4a33] px-4 py-2 text-center font-semibold text-white">
 					Call/Text {phoneDisplay}
 				</a>
