@@ -13,15 +13,15 @@
 </svelte:head>
 
 <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-	<p class="text-sm font-semibold tracking-[0.2em] text-[#c97a2b] uppercase">Wildlife Removal</p>
-	<h1 class="mt-2 text-3xl font-bold text-[#1e2a1f] sm:text-4xl">{data.animal.label} Removal</h1>
-	<p class="mt-4 text-lg text-[#3d4536]">{data.animal.summary}</p>
-	<p class="mt-4 text-[#3d4536]">{data.animal.details}</p>
+	<p class="text-sm font-semibold tracking-[0.2em] text-[#F48222] uppercase">Wildlife Removal</p>
+	<h1 class="mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">{data.animal.label} Removal</h1>
+	<p class="mt-4 text-lg text-[#333333]">{data.animal.summary}</p>
+	<p class="mt-4 text-[#333333]">{data.animal.details}</p>
 
 	<div class="mt-10">
 		<a
 			href="tel:{phoneHref}"
-			class="rounded-full bg-[#1f4a33] px-6 py-3 font-semibold text-white transition hover:bg-[#163826]"
+			class="rounded-full bg-[#F48222] px-6 py-3 font-semibold text-white transition hover:bg-[#D9721A]"
 		>
 			Call/Text {phoneDisplay}
 		</a>
